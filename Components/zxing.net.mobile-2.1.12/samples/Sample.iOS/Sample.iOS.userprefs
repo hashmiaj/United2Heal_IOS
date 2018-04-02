@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{D119965B-BA8F-40D7-86B4-E9654E1014E2}|Default">
+  <MonoDevelop.Ide.ItemProperties.Sample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7479B3F5-108E-4224-84CD-5E95B7CAA697" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sample.iOS/AppDelegate.cs">
+    <Files>
+      <File FileName="../../../../DailyPlanet_IOS/ViewController.cs" Line="42" Column="13" />
+      <File FileName="../../../../DailyPlanet_IOS/ViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="../../../../DailyPlanet_IOS/Main.cs" Line="12" Column="1" />
+      <File FileName="../../../../DailyPlanet_IOS/Entitlements.plist" />
+      <File FileName="../../../../DailyPlanet_IOS/Main.storyboard" />
+      <File FileName="../../../../DailyPlanet_IOS/Info.plist" />
+      <File FileName="Sample.iOS/AppDelegate.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DailyPlanet_IOS" expanded="True">
+            <Node name="DailyPlanet_IOS" expanded="True">
+              <Node name="ComponentReferenceFolder" expanded="True" />
+            </Node>
+          </Node>
+          <Node name="Sample.iOS" expanded="True">
+            <Node name="Sample.iOS" expanded="True">
+              <Node name="AppDelegate.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/abdullahhashmi/Projects/DailyPlanet_IOS/DailyPlanet_IOS/ViewController.cs" line="36" column="1" />
+      <Breakpoint file="/Users/abdullahhashmi/Projects/DailyPlanet_IOS/DailyPlanet_IOS/ViewController.cs" line="37" column="1" />
+      <Breakpoint file="/Users/abdullahhashmi/Projects/DailyPlanet_IOS/DailyPlanet_IOS/ViewController.cs" line="40" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

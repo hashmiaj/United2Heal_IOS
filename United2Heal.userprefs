@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{01CE7D6E-90D3-4A1F-8A32-B3A2AC48AE59}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="United2Heal/addNewItemPage.cs">
+    <Files>
+      <File FileName="United2Heal/itemListController.cs" Line="116" Column="1" />
+      <File FileName="United2Heal/ResultsTableController.cs" Line="21" Column="62" />
+      <File FileName="United2Heal/itemCell.cs" Line="30" Column="10" />
+      <File FileName="United2Heal/BaseTableViewController.cs" Line="27" Column="78" />
+      <File FileName="United2Heal/MyTableViewCell.xib" />
+      <File FileName="United2Heal/categoryViewCell.cs" Line="1" Column="1" />
+      <File FileName="United2Heal/categoryPage.cs" Line="40" Column="43" />
+      <File FileName="United2Heal/categoryViewCell.xib" />
+      <File FileName="United2Heal/BaseTableViewControllerCat.cs" Line="27" Column="79" />
+      <File FileName="United2Heal/ResultsTableControllerCat.cs" Line="7" Column="72" />
+      <File FileName="United2Heal/catListController.cs" Line="32" Column="101" />
+      <File FileName="United2Heal/categoryCell.cs" Line="21" Column="29" />
+      <File FileName="United2Heal/Main.storyboard" />
+      <File FileName="United2Heal/ViewController.cs" Line="50" Column="13" />
+      <File FileName="United2Heal/addNewItemPage.cs" Line="27" Column="15" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.United2Heal PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7479B3F5-108E-4224-84CD-5E95B7CAA697" automaticSigning="False">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.United2Heal>
+  <MultiItemStartupConfigurations />
+</Properties>

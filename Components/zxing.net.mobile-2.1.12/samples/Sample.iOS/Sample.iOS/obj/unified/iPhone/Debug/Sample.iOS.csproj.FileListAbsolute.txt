@@ -1,0 +1,15 @@
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/bin/unified/iPhone/Debug/ZxingSharpMonoTouchSample.exe
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/bin/unified/iPhone/Debug/ZxingSharpMonoTouchSample.pdb
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/bin/unified/iPhone/Debug/Calabash.dll
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/bin/unified/iPhone/Debug/ZXing.Net.Mobile.Core.dll
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/bin/unified/iPhone/Debug/zxing.portable.dll
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/bin/unified/iPhone/Debug/ZXingNetMobile.dll
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/obj/unified/iPhone/Debug/device-builds/iphone10.1-11.1.2/ibtool/_BundleResourceWithLogicalName.items
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/obj/unified/iPhone/Debug/device-builds/iphone10.1-11.1.2/actool/_PartialAppManifest.items
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/obj/unified/iPhone/Debug/device-builds/iphone10.1-11.1.2/actool/_BundleResourceWithLogicalName.items
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/obj/unified/iPhone/Debug/device-builds/iphone10.1-11.1.2/optimized/Icon.png
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/obj/unified/iPhone/Debug/device-builds/iphone10.1-11.1.2/optimized/
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/obj/unified/iPhone/Debug/Sample.iOS.csprojResolveAssemblyReference.cache
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/obj/unified/iPhone/Debug/Sample.iOS.csproj.CoreCompileInputs.cache
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/obj/unified/iPhone/Debug/ZxingSharpMonoTouchSample.exe
+/Users/abdullahhashmi/Projects/DailyPlanet_IOS/Components/zxing.net.mobile-2.1.12/samples/Sample.iOS/Sample.iOS/obj/unified/iPhone/Debug/ZxingSharpMonoTouchSample.pdb
