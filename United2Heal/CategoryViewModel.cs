@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using UIKit;
 namespace United2Heal
@@ -39,8 +39,6 @@ namespace United2Heal
 
             CategoryChanged?.Invoke(null, null);
         }
-
-
 
     }
 }

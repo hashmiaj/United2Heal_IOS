@@ -3210,34 +3210,6 @@ exception_handling:;
 	}
 @end
 
-@implementation United2Heal_ResultsTableControllerCat {
-}
-
-	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1
-	{
-		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, p1, 0x8900);
-	}
-
-	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1
-	{
-		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, p1, 0x8A00);
-	}
-
-	-(id) init
-	{
-		static MonoMethod *managed_method = NULL;
-		bool call_super = false;
-		id rv = native_to_managed_trampoline_7 (self, _cmd, &managed_method, &call_super, 0x8B00);
-		if (call_super && rv) {
-			struct objc_super super = {  rv, [United2Heal_BaseTableViewController class] };
-			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));
-		}
-		return rv;
-	}
-@end
-
 @implementation United2Heal_BaseTableViewControllerCat {
 	XamarinObject __monoObjectGCHandle;
 }
@@ -3288,6 +3260,34 @@ exception_handling:;
 	}
 @end
 
+@implementation United2Heal_ResultsTableControllerCat {
+}
+
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, p1, 0x8900);
+	}
+
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, p1, 0x8A00);
+	}
+
+	-(id) init
+	{
+		static MonoMethod *managed_method = NULL;
+		bool call_super = false;
+		id rv = native_to_managed_trampoline_7 (self, _cmd, &managed_method, &call_super, 0x8B00);
+		if (call_super && rv) {
+			struct objc_super super = {  rv, [United2Heal_BaseTableViewControllerCat class] };
+			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));
+		}
+		return rv;
+	}
+@end
+
 @implementation categoryCell {
 	XamarinObject __monoObjectGCHandle;
 }
@@ -3313,13 +3313,13 @@ exception_handling:;
 	}
 
 
-	-(UILabel *) categoryName
+	-(UILabel *) itemCategory
 	{
 		static MonoMethod *managed_method = NULL;
 		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0x9E00);
 	}
 
-	-(void) setCategoryName:(UILabel *)p0
+	-(void) setItemCategory:(UILabel *)p0
 	{
 		static MonoMethod *managed_method = NULL;
 		native_to_managed_trampoline_9 (self, _cmd, &managed_method, p0, 0x9F00);
@@ -5001,8 +5001,8 @@ exception_handling:;
 		{ NULL, 0x900 /* 'United2Heal_ResultsTableController' => 'United2Heal.ResultsTableController, United2Heal' */ },
 		{ NULL, 0xA00 /* 'United2Heal_ItemTVS' => 'United2Heal.ItemTVS, United2Heal' */ },
 		{ NULL, 0xB00 /* 'United2Heal_CategoryViewModel' => 'United2Heal.CategoryViewModel, United2Heal' */ },
-		{ NULL, 0xE00 /* 'United2Heal_ResultsTableControllerCat' => 'United2Heal.ResultsTableControllerCat, United2Heal' */ },
 		{ NULL, 0xF00 /* 'United2Heal_BaseTableViewControllerCat' => 'United2Heal.BaseTableViewControllerCat, United2Heal' */ },
+		{ NULL, 0xE00 /* 'United2Heal_ResultsTableControllerCat' => 'United2Heal.ResultsTableControllerCat, United2Heal' */ },
 		{ NULL, 0x1100 /* 'categoryCell' => 'United2Heal.categoryCell, United2Heal' */ },
 		{ NULL, 0x400 /* 'ViewController' => 'United2Heal.ViewController, United2Heal' */ },
 		{ NULL, 0x500 /* 'itemListController' => 'United2Heal.itemListController, United2Heal' */ },
@@ -5178,8 +5178,8 @@ void xamarin_create_classes () {
 	__xamarin_class_map [109].handle = [United2Heal_ResultsTableController class];
 	__xamarin_class_map [110].handle = [United2Heal_ItemTVS class];
 	__xamarin_class_map [111].handle = [United2Heal_CategoryViewModel class];
-	__xamarin_class_map [112].handle = [United2Heal_ResultsTableControllerCat class];
-	__xamarin_class_map [113].handle = [United2Heal_BaseTableViewControllerCat class];
+	__xamarin_class_map [112].handle = [United2Heal_BaseTableViewControllerCat class];
+	__xamarin_class_map [113].handle = [United2Heal_ResultsTableControllerCat class];
 	__xamarin_class_map [114].handle = [categoryCell class];
 	__xamarin_class_map [115].handle = [ViewController class];
 	__xamarin_class_map [116].handle = [itemListController class];

@@ -24,8 +24,8 @@
 @class United2Heal_ResultsTableController;
 @class United2Heal_ItemTVS;
 @class United2Heal_CategoryViewModel;
-@class United2Heal_ResultsTableControllerCat;
 @class United2Heal_BaseTableViewControllerCat;
+@class United2Heal_ResultsTableControllerCat;
 @class categoryCell;
 @class ViewController;
 @class itemListController;
@@ -112,13 +112,6 @@
 	-(id) init;
 @end
 
-@interface United2Heal_ResultsTableControllerCat : United2Heal_BaseTableViewController {
-}
-	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
-	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
-	-(id) init;
-@end
-
 @interface United2Heal_BaseTableViewControllerCat : UITableViewController {
 }
 	-(void) release;
@@ -130,15 +123,22 @@
 	-(id) init;
 @end
 
+@interface United2Heal_ResultsTableControllerCat : United2Heal_BaseTableViewControllerCat {
+}
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(id) init;
+@end
+
 @interface categoryCell : UITableViewCell {
 }
-	@property (nonatomic, assign) UILabel * categoryName;
+	@property (nonatomic, assign) UILabel * itemCategory;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UILabel *) categoryName;
-	-(void) setCategoryName:(UILabel *)p0;
+	-(UILabel *) itemCategory;
+	-(void) setItemCategory:(UILabel *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
