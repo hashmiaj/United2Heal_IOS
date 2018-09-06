@@ -5,7 +5,7 @@
 	<key>CFBundleName</key>
 	<string>United2Heal</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.U2H.United2Heal</string>
+	<string>com.bundle.United2Heal</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

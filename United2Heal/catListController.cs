@@ -21,28 +21,26 @@ namespace United2Heal
         {
             itemList = new List<Item>();
             List<String> columnCategory = new List<String>();
-            List<String> columnBox = new List<String>();
 
-            string connsqlstring = "Server=dbunited2heal.cxsnwexuvrto.us-east-1.rds.amazonaws.com;Port=3306;database=u2hdb;User Id=united2heal;Password=ilovevcu123;charset=utf8";
+            string connsqlstring = "Server=united2heal.cxsnwexuvrto.us-east-1.rds.amazonaws.com;Port=3306;database=u2hdb;User Id=united2heal;Password=ilovevcu123;charset=utf8";
 
 
             using (MySqlConnection connection = new MySqlConnection(connsqlstring))
             {
                 connection.Open();
-                String queryCategory = "select distinct itemCategory, itemBox from u2hdb.itemTable";
+                String queryCategory = "select distinct CategoryName from u2hdb.ItemBox";
                 using (MySqlCommand command = new MySqlCommand(queryCategory, connection))
                 {
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            columnCategory.Add(reader["itemCategory"].ToString());
-                            columnBox.Add(reader["itemBox"].ToString());
+                            columnCategory.Add(reader["CategoryName"].ToString());;
                         }
                         reader.Close();
                     }
                 }
-                connection.Close();
+                connection.Close(); 
             }
 
             for (int i = 0; i < columnCategory.Count; i++)
@@ -51,8 +49,7 @@ namespace United2Heal
                 {
                     itemName = "",
                     itemCode = "1",
-                    itemCategory = columnCategory[i],
-                    itemBox = columnBox[i]
+                    itemCategory = columnCategory[i]
                 });
             }
 
@@ -120,7 +117,7 @@ namespace United2Heal
                         where p.itemCategory.IndexOf(item, StringComparison.OrdinalIgnoreCase) >= 0
                                orderby p.itemCategory
                     select p;
-
+                
                 filteredProducts.AddRange(query);
             }
 
@@ -155,10 +152,10 @@ namespace United2Heal
         {
             Item selectedItem = (tableView == TableView) ? itemList[indexPath.Row] : resultsTableController.FilteredProducts[indexPath.Row];
 
-            categoryPage controller = this.Storyboard.InstantiateViewController("catStory") as categoryPage;
+            boxListController controller = this.Storyboard.InstantiateViewController("boxListStory") as boxListController;
+            controller.SelectedCategory = selectedItem.itemCategory;
             this.NavigationController.PushViewController(controller, true);
-            controller.categoryNameText = selectedItem.itemCategory;
-            controller.categoryBoxText = selectedItem.itemBox;
+
         }
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
@@ -169,12 +166,6 @@ namespace United2Heal
             theCell.ItemData = item;
             return theCell;
 
-            /*
-            var cell = tableView.DequeueReusableCell("cell_id") as itemCell;
-            var data = itemList[indexPath.Row];
-            cell.ItemData = data;
-            return cell;
-            */
         }
     }
 }

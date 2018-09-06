@@ -24,10 +24,6 @@ namespace United2Heal
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel itemBox { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField itemCodeField { get; set; }
 
         [Outlet]
@@ -42,6 +38,10 @@ namespace United2Heal
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void GenerateBtn_TouchUpInside (UIKit.UIButton sender);
 
+        [Action ("SubmitBtn_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void SubmitBtn_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (categoryPicker != null) {
@@ -52,11 +52,6 @@ namespace United2Heal
             if (generateBtn != null) {
                 generateBtn.Dispose ();
                 generateBtn = null;
-            }
-
-            if (itemBox != null) {
-                itemBox.Dispose ();
-                itemBox = null;
             }
 
             if (itemCodeField != null) {

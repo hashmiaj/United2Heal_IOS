@@ -5,7 +5,7 @@
 	<key>get-task-allow</key>
 	<true/>
 	<key>application-identifier</key>
-	<string>V96U5GVJ3S.com.U2H.United2Heal</string>
+	<string>V96U5GVJ3S.com.bundle.United2Heal</string>
 	<key>com.apple.developer.team-identifier</key>
 	<string>V96U5GVJ3S</string>
 </dict>

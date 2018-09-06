@@ -16,7 +16,7 @@ namespace United2Heal
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel itemBox { get; set; }
+        UIKit.UIPickerView BoxPicker { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -48,9 +48,9 @@ namespace United2Heal
 
         void ReleaseDesignerOutlets ()
         {
-            if (itemBox != null) {
-                itemBox.Dispose ();
-                itemBox = null;
+            if (BoxPicker != null) {
+                BoxPicker.Dispose ();
+                BoxPicker = null;
             }
 
             if (itemCategory != null) {

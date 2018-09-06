@@ -1,15 +1,31 @@
 ﻿<Properties StartupConfiguration="{01CE7D6E-90D3-4A1F-8A32-B3A2AC48AE59}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="United2Heal/CategoryViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="United2Heal/Main.storyboard">
     <Files>
-      <File FileName="United2Heal/itemListController.cs" Line="1" Column="1" />
-      <File FileName="United2Heal/CategoryViewModel.cs" Line="38" Column="9" />
+      <File FileName="United2Heal/boxStatsListPage.cs" Line="81" Column="13" />
+      <File FileName="United2Heal/itemStatCell.cs" Line="23" Column="1" />
+      <File FileName="United2Heal/itemStatViewCell.xib" />
+      <File FileName="United2Heal/itemListController.cs" Line="192" Column="1" />
+      <File FileName="United2Heal/boxListController.cs" Line="158" Column="9" />
+      <File FileName="United2Heal/categoryCell.cs" Line="9" Column="9" />
+      <File FileName="United2Heal/Main.storyboard" />
+      <File FileName="United2Heal/itemCell.cs" Line="1" Column="1" />
+      <File FileName="United2Heal/boxViewCell.xib" />
+      <File FileName="United2Heal/boxCell.cs" Line="18" Column="14" />
+      <File FileName="United2Heal/itemStatCell.designer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/abdullahhashmi/United2Heal/United2Heal/itemPage.cs" relfile="United2Heal/itemPage.cs" line="151" column="1" />
+      <Breakpoint file="/Users/abdullahhashmi/United2Heal/United2Heal/itemPage.cs" relfile="United2Heal/itemPage.cs" line="152" column="1" />
+      <Breakpoint file="/Users/abdullahhashmi/United2Heal/United2Heal/itemPage.cs" relfile="United2Heal/itemPage.cs" line="154" column="1" />
+      <Breakpoint file="/Users/abdullahhashmi/United2Heal/United2Heal/addNewItemPage.cs" relfile="United2Heal/addNewItemPage.cs" line="89" column="1" />
+      <Breakpoint file="/Users/abdullahhashmi/United2Heal/United2Heal/itemPage.cs" relfile="United2Heal/itemPage.cs" line="129" column="1" />
+      <Breakpoint file="/Users/abdullahhashmi/United2Heal/United2Heal/itemPage.cs" relfile="United2Heal/itemPage.cs" line="127" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.United2Heal PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7479B3F5-108E-4224-84CD-5E95B7CAA697" />
+  <MonoDevelop.Ide.ItemProperties.United2Heal PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7479B3F5-108E-4224-84CD-5E95B7CAA697" automaticSigning="False" />
   <MultiItemStartupConfigurations />
 </Properties>

@@ -1,9 +1,9 @@
 # Version: 11.6.1.2 (xcode9.2: 6857dfcc)
 # [first argument, ignore] # --cache
 /Library/Frameworks/Xamarin.iOS.framework/Versions/11.6.1.2/lib/mtouch/mtouch.exe \
-	/Users/abdullahhashmi/Projects/United2Heal/United2Heal/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/mtouch-cache \
+	/Users/abdullahhashmi/United2Heal/United2Heal/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/mtouch-cache \
 	--sim \
-	/Users/abdullahhashmi/Projects/United2Heal/United2Heal/bin/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/United2Heal.app \
+	/Users/abdullahhashmi/United2Heal/United2Heal/bin/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/United2Heal.app \
 	--executable \
 	United2Heal \
 	--debug \
@@ -20,14 +20,14 @@
 	--http-message-handler=HttpClientHandler \
 	--abi=x86_64 \
 	--symbollist \
-	/Users/abdullahhashmi/Projects/United2Heal/United2Heal/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/mtouch-symbols.list \
+	/Users/abdullahhashmi/United2Heal/United2Heal/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/mtouch-symbols.list \
 	--dsym=no \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/United2Heal/MySql.Data.CF.dll \
+	/Users/abdullahhashmi/United2Heal/United2Heal/MySql.Data.CF.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/System.Configuration.ConfigurationManager.4.4.0/lib/netstandard2.0/System.Configuration.ConfigurationManager.dll \
+	/Users/abdullahhashmi/United2Heal/packages/System.Configuration.ConfigurationManager.4.4.0/lib/netstandard2.0/System.Configuration.ConfigurationManager.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
@@ -35,21 +35,21 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/System.Security.AccessControl.4.4.0/lib/netstandard2.0/System.Security.AccessControl.dll \
+	/Users/abdullahhashmi/United2Heal/packages/System.Security.AccessControl.4.4.0/lib/netstandard2.0/System.Security.AccessControl.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/System.Security.Permissions.4.4.0/lib/netstandard2.0/System.Security.Permissions.dll \
+	/Users/abdullahhashmi/United2Heal/packages/System.Security.Permissions.4.4.0/lib/netstandard2.0/System.Security.Permissions.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/System.Security.Principal.Windows.4.4.0/lib/netstandard2.0/System.Security.Principal.Windows.dll \
+	/Users/abdullahhashmi/United2Heal/packages/System.Security.Principal.Windows.4.4.0/lib/netstandard2.0/System.Security.Principal.Windows.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/ZXing.Net.Mobile.2.3.2/lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll \
+	/Users/abdullahhashmi/United2Heal/packages/ZXing.Net.Mobile.2.3.2/lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/ZXing.Net.Mobile.2.3.2/lib/Xamarin.iOS10/zxing.portable.dll \
+	/Users/abdullahhashmi/United2Heal/packages/ZXing.Net.Mobile.2.3.2/lib/Xamarin.iOS10/zxing.portable.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/ZXing.Net.Mobile.2.3.2/lib/Xamarin.iOS10/ZXingNetMobile.dll \
+	/Users/abdullahhashmi/United2Heal/packages/ZXing.Net.Mobile.2.3.2/lib/Xamarin.iOS10/ZXingNetMobile.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/Microsoft.Win32.Primitives.dll \
 	-r \
@@ -325,19 +325,19 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.Xsl.Primitives.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/System.Configuration.ConfigurationManager.4.4.0/lib/netstandard2.0/System.Configuration.ConfigurationManager.dll \
+	/Users/abdullahhashmi/United2Heal/packages/System.Configuration.ConfigurationManager.4.4.0/lib/netstandard2.0/System.Configuration.ConfigurationManager.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/System.Security.AccessControl.4.4.0/lib/netstandard2.0/System.Security.AccessControl.dll \
+	/Users/abdullahhashmi/United2Heal/packages/System.Security.AccessControl.4.4.0/lib/netstandard2.0/System.Security.AccessControl.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/System.Security.Permissions.4.4.0/lib/netstandard2.0/System.Security.Permissions.dll \
+	/Users/abdullahhashmi/United2Heal/packages/System.Security.Permissions.4.4.0/lib/netstandard2.0/System.Security.Permissions.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/System.Security.Principal.Windows.4.4.0/lib/netstandard2.0/System.Security.Principal.Windows.dll \
+	/Users/abdullahhashmi/United2Heal/packages/System.Security.Principal.Windows.4.4.0/lib/netstandard2.0/System.Security.Principal.Windows.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/ZXing.Net.Mobile.2.3.2/lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll \
+	/Users/abdullahhashmi/United2Heal/packages/ZXing.Net.Mobile.2.3.2/lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/ZXing.Net.Mobile.2.3.2/lib/Xamarin.iOS10/zxing.portable.dll \
+	/Users/abdullahhashmi/United2Heal/packages/ZXing.Net.Mobile.2.3.2/lib/Xamarin.iOS10/zxing.portable.dll \
 	-r \
-	/Users/abdullahhashmi/Projects/United2Heal/packages/ZXing.Net.Mobile.2.3.2/lib/Xamarin.iOS10/ZXingNetMobile.dll \
+	/Users/abdullahhashmi/United2Heal/packages/ZXing.Net.Mobile.2.3.2/lib/Xamarin.iOS10/ZXingNetMobile.dll \
 	--target-framework \
 	'Xamarin.iOS,v1.0' \
-	/Users/abdullahhashmi/Projects/United2Heal/United2Heal/bin/iPhoneSimulator/Debug/United2Heal.exe \
+	/Users/abdullahhashmi/United2Heal/United2Heal/bin/iPhoneSimulator/Debug/United2Heal.exe \

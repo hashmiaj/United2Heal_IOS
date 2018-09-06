@@ -3238,7 +3238,7 @@ exception_handling:;
 	-(void) viewDidLoad
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, 0x8F00);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, 0x9000);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -3251,7 +3251,7 @@ exception_handling:;
 	{
 		static MonoMethod *managed_method = NULL;
 		bool call_super = false;
-		id rv = native_to_managed_trampoline_7 (self, _cmd, &managed_method, &call_super, 0x8C00);
+		id rv = native_to_managed_trampoline_7 (self, _cmd, &managed_method, &call_super, 0x8D00);
 		if (call_super && rv) {
 			struct objc_super super = {  rv, [UITableViewController class] };
 			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));
@@ -3266,20 +3266,20 @@ exception_handling:;
 	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, p1, 0x8900);
+		return native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, p1, 0x8A00);
 	}
 
 	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, p1, 0x8A00);
+		return native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, p1, 0x8B00);
 	}
 
 	-(id) init
 	{
 		static MonoMethod *managed_method = NULL;
 		bool call_super = false;
-		id rv = native_to_managed_trampoline_7 (self, _cmd, &managed_method, &call_super, 0x8B00);
+		id rv = native_to_managed_trampoline_7 (self, _cmd, &managed_method, &call_super, 0x8C00);
 		if (call_super && rv) {
 			struct objc_super super = {  rv, [United2Heal_BaseTableViewControllerCat class] };
 			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));
@@ -3316,13 +3316,13 @@ exception_handling:;
 	-(UILabel *) itemCategory
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0x9E00);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0x9F00);
 	}
 
 	-(void) setItemCategory:(UILabel *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_9 (self, _cmd, &managed_method, p0, 0x9F00);
+		native_to_managed_trampoline_9 (self, _cmd, &managed_method, p0, 0xA000);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -3801,6 +3801,12 @@ exception_handling:;
 		native_to_managed_trampoline_17 (self, _cmd, &managed_method, p0, 0x8500);
 	}
 
+	-(void) SubmitBtn_TouchUpInside:(UIButton *)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_17 (self, _cmd, &managed_method, p0, 0x8600);
+	}
+
 	-(BOOL) conformsToProtocol:(void *)p0
 	{
 		static MonoMethod *managed_method = NULL;
@@ -3836,43 +3842,43 @@ exception_handling:;
 	-(void) viewDidLoad
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, 0x9100);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, 0x9200);
 	}
 
 	-(void) updateSearchResultsForSearchController:(UISearchController *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_21 (self, _cmd, &managed_method, p0, 0x9300);
+		native_to_managed_trampoline_21 (self, _cmd, &managed_method, p0, 0x9400);
 	}
 
 	-(void) searchBarSearchButtonClicked:(UISearchBar *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_22 (self, _cmd, &managed_method, p0, 0x9400);
+		native_to_managed_trampoline_22 (self, _cmd, &managed_method, p0, 0x9500);
 	}
 
 	-(NSInteger) numberOfSectionsInTableView:(UITableView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_23 (self, _cmd, &managed_method, p0, 0x9500);
+		return native_to_managed_trampoline_23 (self, _cmd, &managed_method, p0, 0x9600);
 	}
 
 	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, p1, 0x9600);
+		return native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, p1, 0x9700);
 	}
 
 	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_24 (self, _cmd, &managed_method, p0, p1, 0x9700);
+		native_to_managed_trampoline_24 (self, _cmd, &managed_method, p0, p1, 0x9800);
 	}
 
 	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, p1, 0x9800);
+		return native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, p1, 0x9900);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -3910,55 +3916,55 @@ exception_handling:;
 	-(UILabel *) categoryBox
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0xA900);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0xAA00);
 	}
 
 	-(void) setCategoryBox:(UILabel *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_9 (self, _cmd, &managed_method, p0, 0xAA00);
+		native_to_managed_trampoline_9 (self, _cmd, &managed_method, p0, 0xAB00);
 	}
 
 	-(UILabel *) categoryName
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0xAB00);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0xAC00);
 	}
 
 	-(void) setCategoryName:(UILabel *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_9 (self, _cmd, &managed_method, p0, 0xAC00);
+		native_to_managed_trampoline_9 (self, _cmd, &managed_method, p0, 0xAD00);
 	}
 
 	-(UIButton *) SubmitBtn
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_16 (self, _cmd, &managed_method, 0xAD00);
+		return native_to_managed_trampoline_16 (self, _cmd, &managed_method, 0xAE00);
 	}
 
 	-(void) setSubmitBtn:(UIButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_17 (self, _cmd, &managed_method, p0, 0xAE00);
+		native_to_managed_trampoline_17 (self, _cmd, &managed_method, p0, 0xAF00);
 	}
 
 	-(void) viewDidLoad
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, 0xA300);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, 0xA400);
 	}
 
 	-(void) didReceiveMemoryWarning
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, 0xA400);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, 0xA500);
 	}
 
 	-(void) SubmitBtn_TouchUpInside:(UIButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_17 (self, _cmd, &managed_method, p0, 0xAF00);
+		native_to_managed_trampoline_17 (self, _cmd, &managed_method, p0, 0xB000);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -3971,7 +3977,7 @@ exception_handling:;
 	{
 		static MonoMethod *managed_method = NULL;
 		bool call_super = false;
-		id rv = native_to_managed_trampoline_7 (self, _cmd, &managed_method, &call_super, 0xA200);
+		id rv = native_to_managed_trampoline_7 (self, _cmd, &managed_method, &call_super, 0xA300);
 		if (call_super && rv) {
 			struct objc_super super = {  rv, [UIViewController class] };
 			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));

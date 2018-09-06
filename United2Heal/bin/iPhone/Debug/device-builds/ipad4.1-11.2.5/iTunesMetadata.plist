@@ -11,6 +11,6 @@
 	<key>softwareIconNeedsShine</key>
 	<true/>
 	<key>softwareVersionBundleId</key>
-	<string>com.U2H.United2Heal</string>
+	<string>com.bundle.United2Heal</string>
 </dict>
 </plist>

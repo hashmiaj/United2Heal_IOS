@@ -32,17 +32,15 @@ namespace United2Heal
             List<String> columnNames = new List<String>();
             List<String> columnCodes = new List<String>();
             List<String> columnCategory = new List<String>();
-            List<String> columnBox = new List<String>();
 
-            string connsqlstring = "Server=dbunited2heal.cxsnwexuvrto.us-east-1.rds.amazonaws.com;Port=3306;database=u2hdb;User Id=united2heal;Password=ilovevcu123;charset=utf8";
+            string connsqlstring = "Server=united2heal.cxsnwexuvrto.us-east-1.rds.amazonaws.com;Port=3306;database=u2hdb;User Id=united2heal;Password=ilovevcu123;charset=utf8";
 
             using (MySqlConnection connection = new MySqlConnection(connsqlstring))
             {
                 connection.Open();
-                string queryNames = "select itemName from u2hdb.itemTable";
-                string queryCodes = "select itemID from u2hdb.itemTable";
-                string queryCategory = "select itemCategory from u2hdb.itemTable";
-                string queryBox = "select itemBox from u2hdb.itemTable";
+                string queryNames = "select ItemName from u2hdb.ItemTable";
+                string queryCodes = "select ItemID from u2hdb.ItemTable";
+                string queryCategory = "select CategoryName from u2hdb.ItemTable";
 
                 using (MySqlCommand command = new MySqlCommand(queryNames, connection))
                 {
@@ -79,20 +77,6 @@ namespace United2Heal
                     }
                 }
 
-                using (MySqlCommand command = new MySqlCommand(queryBox, connection))
-                {
-                    using (MySqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            string box = reader.GetString(0);
-                            box.Trim();
-                            columnBox.Add(box);
-                        }
-                        reader.Close();
-                    }
-                }
-
 
                 connection.Close();
             }
@@ -103,8 +87,7 @@ namespace United2Heal
                 {
                     itemName = columnNames[i],
                     itemCode = columnCodes[i],
-                    itemCategory = columnCategory[i],
-                    itemBox = columnBox[i]
+                    itemCategory = columnCategory[i]
                 });
             }
 
@@ -206,12 +189,12 @@ namespace United2Heal
         {
             Item selectedItem = (tableView == TableView) ? itemList[indexPath.Row] : resultsTableController.FilteredProducts[indexPath.Row];
 
-            itemPage controller = this.Storyboard.InstantiateViewController("story") as itemPage;
+            itemPage controller = this.Storyboard.InstantiateViewController("itemStory") as itemPage;
             this.NavigationController.PushViewController(controller, true);
             controller.itemNameText = selectedItem.itemName;
             controller.itemCodeText = selectedItem.itemCode;
             controller.itemCategoryText = selectedItem.itemCategory;
-            controller.itemBoxText = selectedItem.itemBox;
+            //controller.itemBoxText = selectedItem.itemBox;
         }
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)

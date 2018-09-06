@@ -249,6 +249,7 @@
 	-(void) viewDidLoad;
 	-(void) didReceiveMemoryWarning;
 	-(void) GenerateBtn_TouchUpInside:(UIButton *)p0;
+	-(void) SubmitBtn_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 

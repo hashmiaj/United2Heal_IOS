@@ -62190,7 +62190,7 @@ _mono_aot_file_info:
 	.long 672,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 149,198,167,61,58,5,247,227,172,220,164,163,124,103,18,19
+	.byte 19,142,163,230,113,135,109,85,220,177,31,109,179,237,85,211
 	.globl _mono_aot_module_ZXingNetMobile_info
 	.align 3
 _mono_aot_module_ZXingNetMobile_info:

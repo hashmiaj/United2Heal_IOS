@@ -2,7 +2,6 @@
 using UIKit;
 using System.Collections.Generic;
 using Foundation;
-
 namespace United2Heal
 {
     public class ResultsTableController : BaseTableViewController
@@ -17,7 +16,6 @@ namespace United2Heal
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             Item product = FilteredProducts[indexPath.Row];
-            //var cell = tableView.DequeueReusableCell("cell_id") as itemCell;
             var cell = tableView.DequeueReusableCell("cell_id", indexPath) as itemCell;
             ConfigureCell(cell, product);
             return cell;
