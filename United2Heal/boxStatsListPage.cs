@@ -3,6 +3,7 @@ using System;
 using UIKit;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
+using United2Heal.Models;
 
 namespace United2Heal
 {
@@ -10,13 +11,13 @@ namespace United2Heal
     {
         public List<Item> itemList;
 
-        public string SelectedCategory
+        public string SelectedBoxGroup
         {
             get;
             set;
         }
 
-        public string SelectedBox
+        public string SelectedBoxNumber
         {
             get;
             set;
@@ -30,8 +31,7 @@ namespace United2Heal
         public void LoadList()
         {
             itemList = new List<Item>();
-            List<String> columnItemName = new List<String>();
-            List<String> columnItemQuantity = new List<String>();
+            List<BoxedItem> BoxedItems = new List<BoxedItem>();
 
             string connsqlstring = "Server=united2heal.cxsnwexuvrto.us-east-1.rds.amazonaws.com;Port=3306;database=u2hdb;User Id=united2heal;Password=ilovevcu123;charset=utf8";
 
@@ -39,16 +39,19 @@ namespace United2Heal
             using (MySqlConnection connection = new MySqlConnection(connsqlstring))
             {
                 connection.Open();
-                String queryCategory = "select ItemName, ItemQuantity from u2hdb.ItemBox where CategoryName = " 
-                    + "'" + SelectedCategory + "' AND BoxName = '" + SelectedBox + "'";
+                String queryCategory = "select ItemName, ItemQuantity from u2hdb.ItemBox where GroupName = " 
+                    + "'" + SelectedBoxGroup + "' AND BoxNumber = '" + SelectedBoxNumber + "' AND School = '" + GlobalVariables.SchoolName + "' Order by ItemName";
                 using (MySqlCommand command = new MySqlCommand(queryCategory, connection))
                 {
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            columnItemName.Add(reader["ItemName"].ToString());
-                            columnItemQuantity.Add(reader["ItemQuantity"].ToString());
+                            BoxedItems.Add(new BoxedItem
+                            {
+                                ItemName = reader["ItemName"].ToString(),
+                                ItemQuantity = reader["ItemQuantity"].ToString(),
+                            });
                         }
                         reader.Close();
                     }
@@ -56,12 +59,12 @@ namespace United2Heal
                 connection.Close();
             }
 
-            for (int i = 0; i < columnItemName.Count; i++)
+            for (int i = 0; i < BoxedItems.Count; i++)
             {
                 itemList.Add(new Item()
                 {
-                    itemName = columnItemName[i],
-                    itemCode = columnItemQuantity[i]
+                    ItemName = BoxedItems[i].ItemName,
+                    ItemID = BoxedItems[i].ItemQuantity
                 });
             }
         }
@@ -70,7 +73,7 @@ namespace United2Heal
         {
             base.ViewDidLoad();
 
-            if(SelectedCategory != null && SelectedBox != null)
+            if(SelectedBoxGroup != null && SelectedBoxNumber != null)
             {
                 LoadList();
             }

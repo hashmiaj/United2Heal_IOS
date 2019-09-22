@@ -24,7 +24,7 @@ namespace United2Heal
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel itemName { get; set; }
+        UIKit.UILabel ItemName { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -38,9 +38,9 @@ namespace United2Heal
                 itemCode = null;
             }
 
-            if (itemName != null) {
-                itemName.Dispose ();
-                itemName = null;
+            if (ItemName != null) {
+                ItemName.Dispose ();
+                ItemName = null;
             }
         }
     }

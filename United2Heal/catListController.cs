@@ -7,11 +7,13 @@ using MySql;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Data;
+using United2Heal.Models;
+
 namespace United2Heal
 {
     public partial class catListController : UITableViewController
     {
-        readonly List<Item> itemList;
+        readonly List<BoxedItem> itemList;
         UISearchController searchController;
         ResultsTableControllerCat resultsTableController;
         bool searchControllerWasActive;
@@ -19,7 +21,9 @@ namespace United2Heal
 
         public catListController (IntPtr handle) : base (handle)
         {
-            itemList = new List<Item>();
+            Title = "Group List";
+
+            itemList = new List<BoxedItem>();
             List<String> columnCategory = new List<String>();
 
             string connsqlstring = "Server=united2heal.cxsnwexuvrto.us-east-1.rds.amazonaws.com;Port=3306;database=u2hdb;User Id=united2heal;Password=ilovevcu123;charset=utf8";
@@ -28,14 +32,14 @@ namespace United2Heal
             using (MySqlConnection connection = new MySqlConnection(connsqlstring))
             {
                 connection.Open();
-                String queryCategory = "select distinct CategoryName from u2hdb.ItemBox";
-                using (MySqlCommand command = new MySqlCommand(queryCategory, connection))
+                String queryCategory = "select distinct GroupName from u2hdb.ItemBox where School = '" + GlobalVariables.SchoolName + "' Order by GroupName";
+                using (MySqlCommand command = new MySqlCommand(queryCategory, connection)) 
                 {
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            columnCategory.Add(reader["CategoryName"].ToString());;
+                            columnCategory.Add(reader["GroupName"].ToString());;
                         }
                         reader.Close();
                     }
@@ -45,11 +49,11 @@ namespace United2Heal
 
             for (int i = 0; i < columnCategory.Count; i++)
             {
-                itemList.Add(new Item()
+                itemList.Add(new BoxedItem()
                 {
-                    itemName = "",
-                    itemCode = "1",
-                    itemCategory = columnCategory[i]
+                    ItemName = "",
+                    ItemID = "1",
+                    ItemBoxGroup = columnCategory[i]
                 });
             }
 
@@ -63,7 +67,7 @@ namespace United2Heal
 
             resultsTableController = new ResultsTableControllerCat
             {
-                FilteredProducts = new List<Item>()
+                FilteredProducts = new List<BoxedItem>()
             };
 
             searchController = new UISearchController(resultsTableController)
@@ -95,14 +99,14 @@ namespace United2Heal
         }
 
 
-        List<Item> PerformSearch(string searchString)
+        List<BoxedItem> PerformSearch(string searchString)
         {
             searchString = searchString.Trim();
             string[] searchItems = string.IsNullOrEmpty(searchString)
                 ? new string[0]
                 : searchString.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            var filteredProducts = new List<Item>();
+            var filteredProducts = new List<BoxedItem>();
 
             foreach (var item in searchItems)
             {
@@ -112,10 +116,10 @@ namespace United2Heal
                 // double number = Double.MinValue;
                 // Double.TryParse(item, out number);
 
-                IEnumerable<Item> query =
+                IEnumerable<BoxedItem> query =
                     from p in itemList
-                        where p.itemCategory.IndexOf(item, StringComparison.OrdinalIgnoreCase) >= 0
-                               orderby p.itemCategory
+                        where p.ItemBoxGroup.IndexOf(item, StringComparison.OrdinalIgnoreCase) >= 0
+                               orderby p.ItemBoxGroup
                     select p;
                 
                 filteredProducts.AddRange(query);
@@ -150,17 +154,17 @@ namespace United2Heal
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            Item selectedItem = (tableView == TableView) ? itemList[indexPath.Row] : resultsTableController.FilteredProducts[indexPath.Row];
+            BoxedItem selectedItem = (tableView == TableView) ? itemList[indexPath.Row] : resultsTableController.FilteredProducts[indexPath.Row];
 
             boxListController controller = this.Storyboard.InstantiateViewController("boxListStory") as boxListController;
-            controller.SelectedCategory = selectedItem.itemCategory;
+            controller.SelectedBoxGroup = selectedItem.ItemBoxGroup;
             this.NavigationController.PushViewController(controller, true);
 
         }
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
-            Item item = itemList[indexPath.Row];
+            BoxedItem item = itemList[indexPath.Row];
 
             var theCell = TableView.DequeueReusableCell((NSString)"cat_cell_id", indexPath) as categoryCell;
             theCell.ItemData = item;

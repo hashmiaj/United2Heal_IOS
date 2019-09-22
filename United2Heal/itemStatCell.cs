@@ -1,6 +1,7 @@
 using Foundation;
 using System;
 using UIKit;
+using United2Heal.Models;
 
 namespace United2Heal
 {
@@ -22,14 +23,14 @@ namespace United2Heal
             {
                 itemData = value;
 
-                itemName.Text = itemData.itemName;
-                itemQuantity.Text = itemData.itemCode + "x";
+                ItemName.Text = itemData.ItemName;
+                itemQuantity.Text = itemData.ItemID + "x";
             }
         }
 
         internal void UpdateCell(Item item)
         {
-            //itemName.Text = item.itemName;
+            //ItemName.Text = item.ItemName;
             //itemQuantity.Text = item.itemCode;
         }
     }

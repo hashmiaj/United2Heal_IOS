@@ -1,14 +1,15 @@
 using Foundation;
 using System;
 using UIKit;
+using United2Heal.Models;
 
 namespace United2Heal
 {
     public partial class categoryCell : UITableViewCell
     {
-        private Item itemData;
+        private BoxedItem itemData;
 
-        public Item ItemData
+        public BoxedItem ItemData
         {
             get
             {
@@ -18,7 +19,7 @@ namespace United2Heal
             {
                 itemData = value;
 
-                itemCategory.Text = itemData.itemCategory;
+                itemCategory.Text = itemData.ItemBoxGroup;
             }
         }
 
@@ -28,7 +29,7 @@ namespace United2Heal
         }
         internal void UpdateCell(Item item)
         {
-            //itemNameLbl.Text = item.itemName;
+            //ItemNameLbl.Text = item.ItemName;
             //itemNumberLbl.Text = item.itemNumber; 
         }
     }

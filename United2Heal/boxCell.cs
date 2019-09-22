@@ -1,16 +1,16 @@
 ﻿using System;
-
 using Foundation;
 using UIKit;
+using United2Heal.Models;
 
 namespace United2Heal
 {
     public partial class boxCell : UITableViewCell
     {
 
-        private Item itemData;
+        private BoxedItem itemData;
 
-        public Item ItemData
+        public BoxedItem ItemData
         {
             get
             {
@@ -20,7 +20,7 @@ namespace United2Heal
             {
                 itemData = value;
 
-                boxName.Text = itemData.itemBox;
+                boxNumber.Text = itemData.ItemBoxNumber;
             }
         }
 

@@ -8,6 +8,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Data;
 using ObjCRuntime;
+using United2Heal.Models;
 
 namespace United2Heal
 {
@@ -26,71 +27,33 @@ namespace United2Heal
 
         public itemListController(IntPtr handle) : base(handle)
         {
-
-
             itemList = new List<Item>();
-            List<String> columnNames = new List<String>();
-            List<String> columnCodes = new List<String>();
-            List<String> columnCategory = new List<String>();
 
             string connsqlstring = "Server=united2heal.cxsnwexuvrto.us-east-1.rds.amazonaws.com;Port=3306;database=u2hdb;User Id=united2heal;Password=ilovevcu123;charset=utf8";
 
             using (MySqlConnection connection = new MySqlConnection(connsqlstring))
             {
                 connection.Open();
-                string queryNames = "select ItemName from u2hdb.ItemTable";
-                string queryCodes = "select ItemID from u2hdb.ItemTable";
-                string queryCategory = "select CategoryName from u2hdb.ItemTable";
+                string Query = "Select * From u2hdb.ItemTable Order by ItemName";
 
-                using (MySqlCommand command = new MySqlCommand(queryNames, connection))
+                using (MySqlCommand command = new MySqlCommand(Query, connection))
                 {
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            columnNames.Add(reader.GetString(0));
+                            itemList.Add(new Item()
+                            {
+                                ItemID = reader.GetString(0),
+                                ItemName = reader.GetString(1)
+                            });
+
                         }
                         reader.Close();
                     }
                 }
-
-                using (MySqlCommand command = new MySqlCommand(queryCodes, connection))
-                {
-                    using (MySqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            columnCodes.Add(reader.GetString(0));
-                        }
-                        reader.Close();
-                    }
-                }
-                using (MySqlCommand command = new MySqlCommand(queryCategory, connection))
-                {
-                    using (MySqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            columnCategory.Add(reader.GetString(0));
-                        }
-                        reader.Close();
-                    }
-                }
-
-
                 connection.Close();
             }
-
-            for (int i = 0; i < columnNames.Count; i++)
-            {
-                itemList.Add(new Item()
-                {
-                    itemName = columnNames[i],
-                    itemCode = columnCodes[i],
-                    itemCategory = columnCategory[i]
-                });
-            }
-
         }
 
         public override void ViewDidLoad()
@@ -150,9 +113,9 @@ namespace United2Heal
 
                 IEnumerable<Item> query =
                     from p in itemList
-                    where p.itemName.IndexOf(item, StringComparison.OrdinalIgnoreCase) >= 0
-                           || p.itemCode == code.ToString()
-                    orderby p.itemName
+                    where p.ItemName.IndexOf(item, StringComparison.OrdinalIgnoreCase) >= 0
+                           || p.ItemID == code.ToString()
+                    orderby p.ItemName
                     select p;
 
                 filteredProducts.AddRange(query);
@@ -191,10 +154,8 @@ namespace United2Heal
 
             itemPage controller = this.Storyboard.InstantiateViewController("itemStory") as itemPage;
             this.NavigationController.PushViewController(controller, true);
-            controller.itemNameText = selectedItem.itemName;
-            controller.itemCodeText = selectedItem.itemCode;
-            controller.itemCategoryText = selectedItem.itemCategory;
-            //controller.itemBoxText = selectedItem.itemBox;
+            controller.ItemNameText = selectedItem.ItemName;
+            controller.itemCodeText = selectedItem.ItemID;
         }
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)

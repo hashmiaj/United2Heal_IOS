@@ -2,6 +2,7 @@
 using Foundation;
 using UIKit;
 using System.Collections.Generic;
+using United2Heal.Models;
 namespace United2Heal
 {
     internal class ItemTVS : UITableViewSource
@@ -31,7 +32,7 @@ namespace United2Heal
             var cell = tableView.DequeueReusableCell("cell_id");
 
             var data = items[indexPath.Row];
-            cell.TextLabel.Text = data.itemName;
+            cell.TextLabel.Text = data.ItemName;
 
             return cell;
         }

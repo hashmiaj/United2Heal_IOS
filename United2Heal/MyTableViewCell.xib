@@ -38,7 +38,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="itemName" destination="288" id="name-outlet-288"/>
+                <outlet property="ItemName" destination="288" id="name-outlet-288"/>
                 <outlet property="itemCode" destination="595" id="name-outlet-595"/>
                 <outlet property="itemCategory" destination="1055" id="name-outlet-1055"/>
             </connections>

@@ -16,27 +16,11 @@ namespace United2Heal
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIPickerView categoryPicker { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton generateBtn { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField itemCodeField { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField itemNameField { get; set; }
+        UIKit.UITextField ItemNameField { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton submitBtn { get; set; }
-
-        [Action ("GenerateBtn_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void GenerateBtn_TouchUpInside (UIKit.UIButton sender);
 
         [Action ("SubmitBtn_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -44,24 +28,9 @@ namespace United2Heal
 
         void ReleaseDesignerOutlets ()
         {
-            if (categoryPicker != null) {
-                categoryPicker.Dispose ();
-                categoryPicker = null;
-            }
-
-            if (generateBtn != null) {
-                generateBtn.Dispose ();
-                generateBtn = null;
-            }
-
-            if (itemCodeField != null) {
-                itemCodeField.Dispose ();
-                itemCodeField = null;
-            }
-
-            if (itemNameField != null) {
-                itemNameField.Dispose ();
-                itemNameField = null;
+            if (ItemNameField != null) {
+                ItemNameField.Dispose ();
+                ItemNameField = null;
             }
 
             if (submitBtn != null) {

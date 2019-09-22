@@ -32,7 +32,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="itemQuantity" destination="2391" id="name-outlet-2391"/>
-                <outlet property="itemName" destination="2140" id="name-outlet-2140"/>
+                <outlet property="ItemName" destination="2140" id="name-outlet-2140"/>
             </connections>
         </tableViewCell>
     </objects>

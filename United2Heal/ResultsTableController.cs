@@ -2,6 +2,7 @@
 using UIKit;
 using System.Collections.Generic;
 using Foundation;
+using United2Heal.Models;
 namespace United2Heal
 {
     public class ResultsTableController : BaseTableViewController

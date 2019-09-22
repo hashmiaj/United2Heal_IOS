@@ -20,7 +20,15 @@ namespace United2Heal
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel itemCategory { get; set; }
+        UIKit.UILabel ExpirationLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIDatePicker ExpirationPicker { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISwitch ExpirationSwitch { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -28,7 +36,7 @@ namespace United2Heal
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel itemName { get; set; }
+        UIKit.UILabel ItemName { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -42,6 +50,10 @@ namespace United2Heal
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton submit { get; set; }
 
+        [Action ("ExpirationSwitchValueChanged:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void ExpirationSwitchValueChanged (UIKit.UISwitch sender);
+
         [Action ("Submit_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void Submit_TouchUpInside (UIKit.UIButton sender);
@@ -53,9 +65,19 @@ namespace United2Heal
                 BoxPicker = null;
             }
 
-            if (itemCategory != null) {
-                itemCategory.Dispose ();
-                itemCategory = null;
+            if (ExpirationLabel != null) {
+                ExpirationLabel.Dispose ();
+                ExpirationLabel = null;
+            }
+
+            if (ExpirationPicker != null) {
+                ExpirationPicker.Dispose ();
+                ExpirationPicker = null;
+            }
+
+            if (ExpirationSwitch != null) {
+                ExpirationSwitch.Dispose ();
+                ExpirationSwitch = null;
             }
 
             if (itemCode != null) {
@@ -63,9 +85,9 @@ namespace United2Heal
                 itemCode = null;
             }
 
-            if (itemName != null) {
-                itemName.Dispose ();
-                itemName = null;
+            if (ItemName != null) {
+                ItemName.Dispose ();
+                ItemName = null;
             }
 
             if (itemPageView != null) {

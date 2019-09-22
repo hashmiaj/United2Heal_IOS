@@ -17,11 +17,20 @@ namespace United2Heal
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel boxName { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel boxNumber { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (boxName != null) {
                 boxName.Dispose ();
                 boxName = null;
+            }
+
+            if (boxNumber != null) {
+                boxNumber.Dispose ();
+                boxNumber = null;
             }
         }
     }

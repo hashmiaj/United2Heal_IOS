@@ -1,5 +1,7 @@
 ﻿using System;
 using UIKit;
+using United2Heal.Models;
+
 namespace United2Heal
 {
     public class BaseTableViewController : UITableViewController
@@ -16,8 +18,8 @@ namespace United2Heal
 
         protected void ConfigureCell(UITableViewCell cell, Item product)
         {
-            cell.TextLabel.Text = product.itemName;
-            string detailedStr = string.Format("{0:C} | {1}", product.itemCode, product.itemCategory);
+            cell.TextLabel.Text = product.ItemName;
+            //string detailedStr = string.Format("{0:C} | {1}", product.ItemName, product.ItemID);
             //cell.DetailTextLabel.Text = detailedStr;
         }
 
