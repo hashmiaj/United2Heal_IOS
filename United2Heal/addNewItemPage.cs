@@ -24,7 +24,13 @@ namespace United2Heal
             ItemNameField.ClearButtonMode = UITextFieldViewMode.WhileEditing;
 
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
-            g.CancelsTouchesInView = false; 
+            g.CancelsTouchesInView = false;
+
+            ItemNameField.ShouldReturn = delegate
+            {
+                ItemNameField.ResignFirstResponder();
+                return true;
+            };
 
 
             View.AddGestureRecognizer(g);
@@ -54,6 +60,31 @@ namespace United2Heal
             sqlconn.ConnectionString = connsqlstring;
             sqlconn.Open();
 
+            string QueryCheckName = "Select ItemName From u2hdb.ItemTable where ItemName = '" + ItemNameField.Text + "'";
+            MySqlCommand CheckNamecmd = new MySqlCommand(QueryCheckName, sqlconn);
+            Object CurrentName = CheckNamecmd.ExecuteScalar();
+            string CheckName = "";
+            if(CurrentName != null)
+            {
+                CheckName = CurrentName.ToString().Trim();
+            }
+
+            if (ItemNameField.Text.Trim().Equals(CheckName))
+            {
+                //Create Alert
+                var OkayAlert = UIAlertController.Create("Duplicate name!", "You've submitted an item with a name that is already in the database! " +
+                	"Please search for this item in the item list.", UIAlertControllerStyle.Alert);
+
+                //Add Action
+                OkayAlert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+
+                // Present Alert
+                PresentViewController(OkayAlert, true, null);
+
+                return;
+            }
+
+
             string QueryMaxID = "SELECT MAX(ItemId) FROM u2hdb.ItemTable";
             MySqlCommand MaxIDCmd = new MySqlCommand(QueryMaxID, sqlconn);
             MaxIDCmd = new MySqlCommand(QueryMaxID, sqlconn);
@@ -70,17 +101,17 @@ namespace United2Heal
             sqlconn.Close();
 
             //Create Alert
-            var Finish = UIAlertController.Create("Done!", "You've just added " + ItemNameField.Text + " to the Item List.", UIAlertControllerStyle.Alert);
+            var Finish = UIAlertController.Create("Done!", "You've just added this item to the Item List. " + 
+                Environment.NewLine + ItemNameField.Text, UIAlertControllerStyle.Alert);
 
             //Add Action
-            Finish.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+            Finish.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, (UIAlertAction OBJ) =>
+            {
+                this.NavigationController.PopToRootViewController(true);
+            }));
 
             // Present Alert
             PresentViewController(Finish, true, null);
-
-
-
-            this.NavigationController.PopToRootViewController(true);
         }
 
         public override void DidReceiveMemoryWarning()

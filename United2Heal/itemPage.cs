@@ -125,13 +125,14 @@ namespace United2Heal
                 sqlconn.Open();
 
                 MySqlCommand sqlcmd;
-                string queryName = "select ItemBoxID, GroupName, BoxNumber, School from u2hdb.ItemBox where ItemName = " + "'" + ItemName.Text + "'";
+                string queryName = "select ItemBoxID, GroupName, BoxNumber, School, ExpirationDate from u2hdb.ItemBox where ItemName = " + "'" + ItemName.Text + "'";
                 sqlcmd = new MySqlCommand(queryName, sqlconn);
 
                 string result = "";
                 string groupname = "";
                 string boxnumber = "";
                 string school = "";
+                string expdate = "";
 
                 using (MySqlDataReader reader = sqlcmd.ExecuteReader())
                 {
@@ -141,6 +142,7 @@ namespace United2Heal
                         groupname = reader.GetString(1);
                         boxnumber = reader.GetString(2);
                         school = reader.GetString(3);
+                        expdate = reader.GetString(4);
                     }
                 }
 
@@ -176,7 +178,7 @@ namespace United2Heal
 
                     sqlconn.Close();
                 }
-                else if (school != GlobalVariables.SchoolName || groupname != GlobalVariables.GroupName || boxnumber != BoxNumber)
+                else if (school != GlobalVariables.SchoolName || groupname != GlobalVariables.GroupName || boxnumber != BoxNumber || expdate != ExpirationDate)
                 {
                     string QueryMaxID = "SELECT MAX(ItemBoxID) FROM u2hdb.ItemBox";
                     sqlcmd = new MySqlCommand(QueryMaxID, sqlconn);
@@ -209,7 +211,7 @@ namespace United2Heal
                     sqlconn.Close();
                 }
 
-                else if (school == GlobalVariables.SchoolName && groupname == GlobalVariables.GroupName && boxnumber == BoxNumber)
+                else if (school == GlobalVariables.SchoolName && groupname == GlobalVariables.GroupName && boxnumber == BoxNumber && expdate == ExpirationDate)
                 {
                     string queryQuantity = "select ItemQuantity from u2hdb.ItemBox where ItemBoxID = " + "'" + result + "'";
 
@@ -248,10 +250,13 @@ namespace United2Heal
                 sqlconn.Close();
                 finishedAlert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, (UIAlertAction OBJ) =>
                 {
+                    this.NavigationController.PopToRootViewController(true);
 
                 }));
 
                 PresentViewController(finishedAlert, true, null);
+
+
 
             }));
 
@@ -266,18 +271,22 @@ namespace United2Heal
 
             ExpirationPicker.Hidden = true;
 
-            itemQuantField.AutocorrectionType = UITextAutocorrectionType.No;
-            itemQuantField.KeyboardType = UIKeyboardType.Default;
-            itemQuantField.ReturnKeyType = UIReturnKeyType.Done;
-            itemQuantField.ClearButtonMode = UITextFieldViewMode.WhileEditing;
+            //itemQuantField.AutocorrectionType = UITextAutocorrectionType.No;
+            //itemQuantField.KeyboardType = UIKeyboardType.Default;
+            //itemQuantField.ReturnKeyType = UIReturnKeyType.Done;
+            //itemQuantField.ClearButtonMode = UITextFieldViewMode.WhileEditing;
+
+            itemQuantField.ShouldReturn = delegate
+            {
+                itemQuantField.ResignFirstResponder();
+                return true;
+            };
 
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
             g.CancelsTouchesInView = false; //for iOS5
 
             View.AddGestureRecognizer(g);
 
-            itemQuantField.Text = "1";
-            itemQuantField = new UITextField { KeyboardType = UIKeyboardType.NumberPad };
             NavigationItem.Title = "United 2 Heal";
             itemCode.Text = itemCodeText;
             ItemName.Text = ItemNameText;
