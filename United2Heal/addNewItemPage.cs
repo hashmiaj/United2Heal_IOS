@@ -85,7 +85,7 @@ namespace United2Heal
             }
 
 
-            string QueryMaxID = "SELECT MAX(ItemId) FROM u2hdb.ItemTable";
+            string QueryMaxID = "SELECT Max(ItemID + 0) from u2hdb.ItemTable";
             MySqlCommand MaxIDCmd = new MySqlCommand(QueryMaxID, sqlconn);
             MaxIDCmd = new MySqlCommand(QueryMaxID, sqlconn);
             Object MaxID = MaxIDCmd.ExecuteScalar();

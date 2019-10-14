@@ -125,7 +125,11 @@ namespace United2Heal
                 sqlconn.Open();
 
                 MySqlCommand sqlcmd;
-                string queryName = "select ItemBoxID, GroupName, BoxNumber, School, ExpirationDate from u2hdb.ItemBox where ItemName = " + "'" + ItemName.Text + "'";
+                //string queryName = "select ItemBoxID, GroupName, BoxNumber, School, ExpirationDate from u2hdb.ItemBox where ItemName = " + "'" + ItemName.Text + "'";
+                string queryName = "select ItemBoxID, GroupName, BoxNumber, School, ExpirationDate from u2hdb.ItemBox " +
+                    "where ItemName = '" + ItemName.Text + "' AND GroupName = '" + GlobalVariables.GroupName + "'" +
+                    " AND BoxNumber = '" + BoxNumber + "' AND ExpirationDate = '" + ExpirationDate + "' AND " +
+                    "School = '" + GlobalVariables.SchoolName + "'";
                 sqlcmd = new MySqlCommand(queryName, sqlconn);
 
                 string result = "";
@@ -148,7 +152,7 @@ namespace United2Heal
 
                 if (result == null)
                 {
-                    string QueryMaxID = "SELECT MAX(ItemBoxID) FROM u2hdb.ItemBox";
+                    string QueryMaxID = "SELECT Max(ItemBoxID + 0) from u2hdb.ItemBox";
                     sqlcmd = new MySqlCommand(QueryMaxID, sqlconn);
                     Object MaxID = sqlcmd.ExecuteScalar();
                     string GetID = MaxID.ToString();
@@ -180,7 +184,7 @@ namespace United2Heal
                 }
                 else if (school != GlobalVariables.SchoolName || groupname != GlobalVariables.GroupName || boxnumber != BoxNumber || expdate != ExpirationDate)
                 {
-                    string QueryMaxID = "SELECT MAX(ItemBoxID) FROM u2hdb.ItemBox";
+                    string QueryMaxID = "SELECT Max(ItemBoxID + 0) from u2hdb.ItemBox";
                     sqlcmd = new MySqlCommand(QueryMaxID, sqlconn);
                     Object MaxID = sqlcmd.ExecuteScalar();
                     string GetID = MaxID.ToString();
