@@ -304,7 +304,7 @@ namespace United2Heal
             using (MySqlConnection connection = new MySqlConnection(connsqlstring))
             {
                 connection.Open();
-                string queryBoxName = "select BoxNumber from u2hdb.BoxTable where isOpen = 1 && GroupName = '" + GlobalVariables.GroupName + "'" +
+                string queryBoxName = "select distinct BoxNumber from u2hdb.BoxTable where isOpen = 1 && GroupName = '" + GlobalVariables.GroupName + "'" +
                 	" && School = '" + GlobalVariables.SchoolName + "' Order by BoxNumber + 0 ASC";
 
                 using (MySqlCommand command = new MySqlCommand(queryBoxName, connection))
